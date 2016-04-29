@@ -2,17 +2,23 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-$("body").css({"backgroundColor" : "#fafce9" , "font-family" : "Arial"});
-$("#header").css({"backgroundColor" : "#fafce9" , "font-family" : "Arial"});
+
+$("body").css({"backgroundColor" : "#ffffff" , "font-family" : "Arial"});
+$("#header").css({"backgroundColor" : "#ffffff" , "font-family" : "Arial"});
 
 $("#role").css("color", "gray");
-$("#topContacts").css("padding" , "0px");
+
+$("#welcomeMessage").css({marginTop : "10px", paddingBottom : "10px", paddingTop : "10px"});
+
+$("#bioinfo").css({"max-width" : "350px", "backgroundColor" : "#ebebeb", "padding" : "10px"});
+$("#topContacts").css({"padding" : "0px", "margin" : "0px", fontSize : "20px"});
+$("#skillaag").css({padding: "10px 0px 10px 15px"});
 
 var HTMLnavBar = {
-    'bar' : '<hr> <nav><ul class="nav nav-pills pull-xs-right"><li class="nav-item"><a class="nav-link" href="#">Projects <span class="sr-only">(current)</span></a></li><li class="nav-item"><a class="nav-link" href="https://github.com/trhubwork">MyCode</a></li><li class="nav-item"> <a class="nav-link" href="#">Contact</a></li></nav> <hr>'
+    'bar' : '<nav><hr><ul class="nav nav-pills pull-xs-right"><li class="nav-item"><a class="nav-link" href="#">Projects <span class="sr-only">(current)</span></a></li><li class="nav-item"><a class="nav-link" href="https://github.com/trhubwork">MyCode</a></li><li class="nav-item"> <a class="nav-link" href="#">EmailMe</a></li></nav>'
   }
 
-$("#header").append(HTMLnavBar.bar);
+
 
 //////////////////////
 // bio section     //
@@ -33,11 +39,27 @@ var bio = {
      "upwork" : "Excel",
 }],
 
-"welcomeMessage" : "A computer programmer, with a focus in JavaScript and Python, looking for independent contractor work.",
-"skills" : [
-
-    "JavaScript" , "Python" , "SEO" , "WordPress"
-],
+"welcomeMessage" : "A computer programmer, with a focus in JavaScript and Python, looking for independent contracting work.",
+"skills" : [{
+    "skill" : "JavaScript",
+    "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    },
+    {
+    "skill" : "Python",
+    "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt." ,
+    },
+    {
+    "skill" : "Excel",
+    "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    },
+    {
+    "skill" : "SEO",
+    "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    },
+    {
+    "skill" : "WordPress",
+    "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    }],
 
 "bioPic": "images/ted.jpg",
 
@@ -47,40 +69,60 @@ var bio = {
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
-  $("#bioinfo").prepend(formattedName);
+  $("#header").prepend(formattedName);
   $("#role").append(formattedRole);
 
-var len = bio.contacts.length;
-for (var contact = 0; contact < len; contact++) {
+  $("#bioinfo").prepend(HTMLcontactGeneric);
 
-console.log(bio.contacts[contact]);
+  $("#skillaag").append(HTMLskillsStart);
 
-  var formattedMobile = HTMLmobile.replace("%data%", bio.contacts[contact].mobile);
-  $("#topContacts").append(formattedMobile);
+  $("#bioinfo").prepend(HTMLnavBar.bar);
 
-  var formattedemail = HTMLemail.replace("%data%", bio.contacts[contact].email);
-  $("#topContacts").append(formattedemail);
 
-    var formattedgithub = HTMLgithub.replace("%data%", bio.contacts[contact].github);
-  $("#topContacts").append(formattedgithub);
 
-  var formattedtwitter = HTMLtwitter.replace("%data%", bio.contacts[contact].twitter);
-  $("#topContacts").append(formattedtwitter);
+  var len = bio.skills.length;
+  for (var skill = 0; skill < len; skill++) {
 
-  var formattedlocation = HTMLlocation.replace("%data%", bio.contacts[contact].location);
-  $("#topContacts").append(formattedlocation);
+    var formattedSkill = HTMLskill.replace("%data%", bio.skills[skill].skill);
+    $("#skillaag").append(formattedSkill);
 
-  var formattedupwork = HTMLupwork.replace("%data%", bio.contacts[contact].upwork);
-  $("#topContacts").append(formattedupwork);
+    var formattedSkillDescrption = HTMLskillDescription.replace("%data%", bio.skills[skill].description);
+    $("#skillaag").append(formattedSkillDescrption);
 
+  }
+
+  var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+  $("#bioinfo").prepend(formattedbioPic);
+
+  var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+  $("#bioinfo").prepend(formattedwelcomeMsg);
+
+ // iterate through contacts
+    var len = bio.contacts.length;
+    for (var contact = 0; contact < len; contact++) {
+
+    console.log(bio.contacts[contact]);
+
+      var formattedMobile = HTMLmobile.replace("%data%", bio.contacts[contact].mobile);
+      $("#topContacts").append(formattedMobile);
+
+      var formattedemail = HTMLemail.replace("%data%", bio.contacts[contact].email);
+      $("#topContacts").append(formattedemail);
+
+      var formattedlocation = HTMLlocation.replace("%data%", bio.contacts[contact].location);
+      $("#topContacts").append(formattedlocation);
+
+      var formattedgithub = HTMLgithub.replace("%data%", bio.contacts[contact].github);
+      $("#topContacts").append(formattedgithub);
+
+      var formattedtwitter = HTMLtwitter.replace("%data%", bio.contacts[contact].twitter);
+      $("#topContacts").append(formattedtwitter);
+
+      var formattedupwork = HTMLupwork.replace("%data%", bio.contacts[contact].upwork);
+      $("#topContacts").append(formattedupwork);
 
 }
 
-var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#topContacts").append(formattedwelcomeMsg);
-
-var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-$("#topContacts").prepend(formattedbioPic);
 
 }
 };
@@ -240,7 +282,7 @@ work.display();
 var projects = {
   "projects" : [
     {
-      "title" : "mountains",
+      "title" : "Mountains",
       "dates" : "March 2016",
       "description" : "A wonderful webpage to give clients and employers an opprotunity to examine my work.",
       "images" : "images/mountains.jpg"
@@ -255,27 +297,27 @@ var projects = {
       "title" : "Oranges in The Night",
       "dates" : "December 2014",
       "description" : "diflj fdason gid ofkd gyeok flasd;j fdais.",
-      "images" : "url"
+      "images" : "images/nicemt.jpg"
     }
   ],
 
   "display" : function () {
+
   var len = projects.projects.length;
   for (var proj = 0; proj < len; proj++) {
     console.log(work.jobs[proj]);
-    $("#projects").append(HTMLprojectStart);
-
+    //$(".project-entrys").append(HTMLprojectStart);
     var formattedProjectsTitle = HTMLprojectTitle.replace("%data%", projects.projects[proj].title);
-    $("#projects").append(formattedProjectsTitle);
+    $(".project-entry").append(formattedProjectsTitle);
 
     var formattedProjectsDates = HTMLprojectDates.replace("%data%", projects.projects[proj].dates);
-    $("#projects").append(formattedProjectsDates);
+    $(".project-entry").append(formattedProjectsDates);
 
     var formattedProjectsDescription = HTMLprojectDescription.replace("%data%", projects.projects[proj].description);
-    $("#projects").append(formattedProjectsDescription);
+    $(".project-entry").append(formattedProjectsDescription);
 
     var formattedProjectsImages = HTMLprojectImage.replace("%data%", projects.projects[proj].images);
-    $("#projects").append(formattedProjectsImages);
+    $(".project-entry").append(formattedProjectsImages);
 
     }
     $(".projpic").css("width", "250px");

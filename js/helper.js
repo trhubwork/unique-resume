@@ -15,7 +15,8 @@ replace the %data% placeholder text you see in them.
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span id="contact-data">%contact%</span><span class="contact-value">%data%</span></li>';
+var HTMLcontactGeneric = '<h3 id="skills-h3"><hr>Personal Details:</h3><ul id="skills" class="flex-box"></ul>'
+//'<li class="flex-item"><span id="contact-data">%contact%</span><span class="contact-value">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span id="contact-data">mobile</span><span class="contact-value">%data%</span></li>';
 var HTMLemail = '<li class="flex-item"><span id="contact-data">email</span><span class="contact-value">%data%</span></li>';
 var HTMLtwitter = '<li class="flex-item"><span id="contact-data">twitter</span><span class="contact-value">%data%</span></li>';
@@ -24,11 +25,12 @@ var HTMLblog = '<li class="flex-item"><span id="contact-data">blog</span><span c
 var HTMLlocation = '<li class="flex-item"><span id="contact-data">location</span><span class="contact-value">%data%</span></li>';
 var HTMLupwork = '<li class="flex-item"><span id="contact-data">Upwork Exams</span><span class="contact-value">%data%</span></li>';
 
-var HTMLbioPic = '<img src="%data%" class="img-thumbnail img-circle">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLbioPic = '<img src="%data%" class="img-thumbnail img-circle center-block">';
+var HTMLwelcomeMsg = '<div id="welcomeMessage" class="text-justify "><h3 id="skills-h3">Overview</h3>%data% <hr></div>';
 
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="contact-value">%data%</span></li>';
+var HTMLskillsStart = '<h2>Skills at a Glance</h2><ul id="skills" class="flex-box"></ul>';
+var HTMLskill = '<li class="flex-item lead"><span class="contact-value">%data%</span></li>';
+var HTMLskillDescription = '<li class="flex-item text-justify"><span class="contact-value">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
@@ -37,11 +39,11 @@ var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
-var HTMLprojectStart = '<div class="project-entry col-md-3"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectStart = '<div class="projectentryrow">';
+var HTMLprojectTitle = '<div col-md-12 "><a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%" class="projpic">';
+var HTMLprojectImage = '<img src="%data%" class="projpic"></div>';
 
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
