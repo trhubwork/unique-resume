@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Ted Riss - Front-End Developer</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<script src="js/jQuery.js"></script>
+<script src="js/helper.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd62WDQRUf3oC-yNsb_xKN7mx5gCTYJzA&callback=initMap"
+  type="text/javascript"></script>
+  <!-- api key for map AIzaSyDd62WDQRUf3oC-yNsb_xKN7mx5gCTYJzA -->
+
+
+<body>
+<div id="main" class="container flex-box">
+<div id ="header"></div>
+<div class="row">
+  <div id="bioinfo" class="clearfix col-md-3">
+    <span id="role"></span>
+    <ul id="topContacts">
+  </div>
+
+  <div id="projects" class="col-md-9">
+    <h2>Projects</h2>
+  </div>
+</div>
+
+  <div id="workExperience" class="col-md-6">
+    <h2>Work Experience</h2>
+  </div>
+
+  <div id="education" class="col-md-6">
+    <h2>Education</h2>
+  </div>
+
+  <div id="mapDiv" class="col-md-12">
+    <h2>Where I've Lived</h2>
+  </div>
+
+  <div id="letsConnect">
+    <h2>Let's Connect</h2>
+    <ul id="footerContacts">
+    </ul>
+  </div>
+ </div>
+ <script src="js\resumeBuilder.js"></script>
+ <script type="text/javascript">
+
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('topContacts').style.backgroundrColor = '#fafce9';
+    }
+    if(document.getElementsByTagName('h1').length === 0) {
+      document.getElementById('header').style.backgroundColor = '#fafce9';
+    }
+    if(document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('workExperience').style.backgroundColor = '#fafce9';
+    }
+    if(document.getElementsByClassName('project-entry').length === 0) {
+      document.getElementById('projects').style.backgroundColor = '#fafce9';
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.backgroundColor = '#fafce9';
+    }
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('letsConnect').style.backgroundColor = '#fafce9';
+    }
+  /*  if(document.getElementById('map') === undefined) {
+      document.getElementById('mapDiv').style.display = 'none';
+    }*/
+    </script>
+</body>
+</html>
