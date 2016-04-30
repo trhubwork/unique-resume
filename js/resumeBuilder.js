@@ -74,11 +74,8 @@ var bio = {
 
   $("#header").prepend(formattedName);
   $("#role").append(formattedRole);
-
   $("#bioinfo").prepend(HTMLcontactGeneric);
-
   $("#skillaag").append(HTMLskillsStart);
-
   $("#bioinfo").prepend(HTMLnavBar.bar);
 
 
@@ -329,6 +326,7 @@ var projects = {
     }
     $(".projpic").css({"width" : "300px", "height" : "200px"});
     $(".bluesteel").css({"font-size" : "25px" });
+    $(".lowbluesteel").css({"font-size" : "20px" });
   }
 };
 

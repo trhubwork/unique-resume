@@ -33,7 +33,7 @@ var HTMLskill = '<li class="flex-item lead"><span class="contact-value">%data%</
 var HTMLskillDescription = '<li class="flex-item text-justify"><span class="contact-value">%data%</span></li>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
+var HTMLworkEmployer = '<a class="lowbluesteel" href="#">%data%';
 var HTMLworkTitle = ' - %data%</a>';
 var HTMLworkDates = '<div class="date-text">%data%</div>';
 var HTMLworkLocation = '<div class="location-text">%data%</div>';
@@ -47,14 +47,14 @@ var HTMLprojectImage = '<img src="%data%" class="projpic col-md-4">';
 
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
+var HTMLschoolName = '<a class="lowbluesteel" href="#">%data%';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<div><em>Major: %data%</em></div><br>';
 
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
+var HTMLonlineTitle = '<a class="lowbluesteel" href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div><br>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
