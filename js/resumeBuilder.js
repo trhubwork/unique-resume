@@ -25,8 +25,14 @@ var HTMLnavBar = {
 ////////////////////
 
 var bio = {
- "name" : "Ted Riss",
- "role" : "Web Developer",
+  "basic" :
+  {
+    "name" : "Ted Riss",
+    "role" : "Web Developer",
+    "welcomeMessage" : "A computer programmer, with a focus in JavaScript and Python, looking for independent contracting work.",
+    "bioPic": "images/ted.jpg"
+
+  },
 
  "contacts": [
    {
@@ -39,8 +45,8 @@ var bio = {
      "upwork" : "Excel",
 }],
 
-"welcomeMessage" : "A computer programmer, with a focus in JavaScript and Python, looking for independent contracting work.",
-"skills" : [{
+"skills" : [
+  {
     "skill" : "JavaScript",
     "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
     },
@@ -59,15 +65,12 @@ var bio = {
     {
     "skill" : "WordPress",
     "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-    }],
-
-"bioPic": "images/ted.jpg",
-
+  }],
 
 "display" : function() {
 
-  var formattedName = HTMLheaderName.replace("%data%", bio.name);
-  var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+  var formattedName = HTMLheaderName.replace("%data%", bio.basic.name);
+  var formattedRole = HTMLheaderRole.replace("%data%", bio.basic.role);
 
   $("#header").prepend(formattedName);
   $("#role").append(formattedRole);
@@ -91,10 +94,10 @@ var bio = {
 
   }
 
-  var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+  var formattedbioPic = HTMLbioPic.replace("%data%", bio.basic.bioPic);
   $("#bioinfo").prepend(formattedbioPic);
 
-  var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+  var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.basic.welcomeMessage);
   $("#bioinfo").prepend(formattedwelcomeMsg);
 
  // iterate through contacts
@@ -120,6 +123,12 @@ var bio = {
 
       var formattedupwork = HTMLupwork.replace("%data%", bio.contacts[contact].upwork);
       $("#topContacts").append(formattedupwork);
+
+      $("#footerContacts").append(formattedMobile);
+      $("#footerContacts").append(formattedemail);
+      $("#footerContacts").append(formattedlocation);
+      $("#footerContacts").append(formattedgithub);
+      $("#footerContacts").append(formattedtwitter);
 
 }
 }
