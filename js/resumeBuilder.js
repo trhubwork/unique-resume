@@ -3,7 +3,7 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 
 
-$("body").css({"backgroundColor" : "#ffffff" , "font-family" : "Arial"});
+$("body").css({"backgroundColor" : "#ffffff" , "font-family" : "Arial",});
 $("#header").css({"backgroundColor" : "#ffffff" , "font-family" : "Arial"});
 
 $("#role").css("color", "gray");
@@ -15,7 +15,7 @@ $("#topContacts").css({"padding" : "0px", "margin" : "0px", fontSize : "20px"});
 $("#skillaag").css({padding: "10px 0px 10px 15px"});
 
 var HTMLnavBar = {
-    'bar' : '<nav><hr><ul class="nav nav-pills pull-xs-right"><li class="nav-item"><a class="nav-link" href="#">Projects <span class="sr-only">(current)</span></a></li><li class="nav-item"><a class="nav-link" href="https://github.com/trhubwork">MyCode</a></li><li class="nav-item"> <a class="nav-link" href="#">EmailMe</a></li></nav>'
+    'bar' : '<nav><hr><ul class="nav nav-pills pull-xs-right"><li class="nav-item"><a class="nav-link" href="#">Projects <span class="sr-only">(current)</span></a></li><li class="nav-item"><a class="nav-link" href="https://github.com/trhubwork">MyCode</a></li><li class="nav-item"> <a class="nav-link" href="#">EmailMe</a></li><li class="nav-item"> <a class="nav-link" href="#">MyMusic</a></li><li class="nav-item"> <a class="nav-link" href="#">UpWork</a></li><li class="nav-item"> <a class="nav-link" href="#">LinkedIn</a></li></nav>'
   }
 
 
@@ -122,8 +122,6 @@ var bio = {
       $("#topContacts").append(formattedupwork);
 
 }
-
-
 }
 };
 
@@ -140,7 +138,7 @@ var education = {
       "degree" : "Masters",
       "dates" : "August 2003 - May 2005",
       "location" : "Lawrence, KS",
-      "major" : "Masters of Business Administration",
+      "major" : ["Masters of Business Administration"],
       "url" : "www.business.ku.edu",
     },
   {
