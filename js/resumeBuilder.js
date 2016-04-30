@@ -11,7 +11,7 @@ $("#role").css("color", "gray");
 $("#welcomeMessage").css({marginTop : "10px", paddingBottom : "10px", paddingTop : "10px"});
 
 $("#bioinfo").css({"max-width" : "350px", "backgroundColor" : "#ebebeb", "padding" : "10px"});
-$("#topContacts").css({"padding" : "0px", "margin" : "0px", fontSize : "20px"});
+$("#topContacts").css({"padding" : "0px", "margin" : "0px", fontSize : "18px"});
 $("#skillaag").css({padding: "10px 0px 10px 15px"});
 
 var HTMLnavBar = {
@@ -134,19 +134,19 @@ bio.display();
 var education = {
   "schools" : [
   {
-      "schoolname" : "University of Kansas Graduate School of Business",
-      "degree" : "Masters",
-      "dates" : "August 2003 - May 2005",
+      "name" : "University of Kansas Graduate School of Business",
       "location" : "Lawrence, KS",
+      "degree" : "Masters",
       "major" : ["Masters of Business Administration"],
+      "dates" : "August 2003 - May 2005",
       "url" : "www.business.ku.edu",
     },
   {
-    "schoolname" : "University of Kansas",
-    "degree" : "Bachelor of Arts",
-    "dates" : "August 1996 - December 2000",
+    "name" : "University of Kansas",
     "location" : "Lawrence, KS",
-    "major" : "Political Science",
+    "degree" : "Bachelor of Arts",
+    "major" : ["Political Science"],
+    "dates" : "August 1996 - December 2000",
     "url" : "www.ku.edu",
     }
   ],
@@ -174,19 +174,19 @@ var education = {
 
   "display" : function() {
     var len = education.schools.length;
-    for (var edu = 0; edu < len;  edu++) {
-      console.log(education.schools[edu]);
+      for (var school = 0; school < len;  school++) {
+      console.log(education.schools[school]);
       $("#education").append(HTMLschoolStart);
 
-      var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[edu].schoolname).replace("#", education.schools[edu].url);
+      var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[school].name).replace("#", education.schools[school].url);
       $(".education-entry:last").append(formattedschoolName);
-      var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[edu].degree);
+      var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
       $(".education-entry:last").append(formattedschoolDegree);
-      var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[edu].dates);
+      var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
       $(".education-entry:last").append(formattedschoolDates);
-      var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.schools[edu].location);
+      var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
       $(".location-text:last").append(formattedschoolLocation);
-      var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[edu].major);
+      var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
       $(".education-entry:last").append(formattedschoolMajor);
 
     }
@@ -240,7 +240,7 @@ var work = {
     {
       "employer": "Global Capital Finance",
       "title": "Associate",
-      "location": "New York, NY.",
+      "location": "New York, NY",
       "dates": "July 2005 - January 2008",
       "description": "Sourced transaction opportunities, analyzed markets and competitive landscape.  Was involved in over $300 million in maritime transactions.  Led valuation process for over two billion worth of maritime and real estate invetment opportunities."
     }
@@ -248,23 +248,23 @@ var work = {
 
   "display" : function () {
     var len = work.jobs.length;
-    for (var jobber = 0; jobber < len; jobber++) {
-      console.log(work.jobs[jobber]);
+    for (var job = 0; job < len; job++) {
+      console.log(work.jobs[job]);
       $("#workExperience").append(HTMLworkStart)
 
-      var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[jobber].employer);
+      var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
       $("#workExperience").append(formattedEmployer);
 
-      var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[jobber].title);
+      var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
       $("#workExperience").append(formattedTitle);
 
-      var formattedDates = HTMLworkDates.replace("%data%", work.jobs[jobber].dates);
+      var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
       $("#workExperience").append(formattedDates);
 
-      var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[jobber].location);
+      var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
       $("#workExperience").append(formattedLocation);
 
-      var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[jobber].description);
+      var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
       $("#workExperience").append(formattedDescription);
     }
   }
@@ -283,19 +283,19 @@ var projects = {
       "title" : "Mountains",
       "dates" : "March 2016",
       "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "images" : "images/mountains.jpg"
+      "images" : ["images/mountains.jpg"]
     },
     {
       "title" : "The Beach",
       "dates" : "March 2016",
       "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "images" : "images/slopes.jpg"
+      "images" : ["images/slopes.jpg"]
     },
     {
       "title" : "Orange River",
       "dates" : "December 2014",
       "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "images" : "images/nicemt.jpg"
+      "images" : ["images/nicemt.jpg"]
     }
   ],
 
