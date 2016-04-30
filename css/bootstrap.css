@@ -14,7 +14,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-.row {
+/*.row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24,7 +24,7 @@
 .row > [class*='col-'] {
   display: flex;
   flex-direction: column;
-}
+} */
 
 
 #contact-data {
@@ -1291,7 +1291,7 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 45px;
 }
 h2,
 .h2 {
@@ -1447,6 +1447,7 @@ ol {
 }
 ul, li {
   list-style-type: none;
+  margin-left: 25px;
 }
 ul ul,
 ol ul,

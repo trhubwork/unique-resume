@@ -242,7 +242,7 @@ var work = {
     {
       "employer": "Global Capital Finance",
       "title": "Associate",
-      "location": "New York, NY. - Purchase, NY.",
+      "location": "New York, NY.",
       "dates": "July 2005 - January 2008",
       "description": "Sourced transaction opportunities, analyzed markets and competitive landscape.  Was involved in over $300 million in maritime transactions.  Led valuation process for over two billion worth of maritime and real estate invetment opportunities."
     }
@@ -284,19 +284,19 @@ var projects = {
     {
       "title" : "Mountains",
       "dates" : "March 2016",
-      "description" : "A wonderful webpage to give clients and employers an opprotunity to examine my work.",
+      "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
       "images" : "images/mountains.jpg"
     },
     {
       "title" : "The Beach",
       "dates" : "March 2016",
-      "description" : "diflj fdason gid ofkd gyeok flasd;j fdais.",
+      "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
       "images" : "images/slopes.jpg"
     },
     {
-      "title" : "Oranges in The Night",
+      "title" : "Orange River",
       "dates" : "December 2014",
-      "description" : "diflj fdason gid ofkd gyeok flasd;j fdais.",
+      "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
       "images" : "images/nicemt.jpg"
     }
   ],
@@ -320,7 +320,8 @@ var projects = {
     $(".project-entry").append(formattedProjectsImages);
 
     }
-    $(".projpic").css("width", "250px");
+    $(".projpic").css({"width" : "300px", "height" : "200px"});
+    $(".bluesteel").css({"font-size" : "25px" });
   }
 };
 
