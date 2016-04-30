@@ -53,11 +53,11 @@ var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<div><em>Major: %data%</em></div><br>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineClasses = '<div class="online-education-entry"><h3>Online Classes</h3></div>';
 var HTMLonlineTitle = '<a class="lowbluesteel" href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div><br>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+var HTMLonlineURL = '<a href="#">%data%</a> <br><br>';
 
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
@@ -132,8 +132,10 @@ function initializeMap() {
 
     // adds the single location property from bio to the locations array
     bio.contacts.forEach(function(contact){
-    locations.push(bio.contacts.location);
+    locations.push(contact.location);
     });
+    //locations.push(bio.contacts.location);
+
     // iterates through school locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide:
@@ -149,6 +151,7 @@ function initializeMap() {
     work.jobs.forEach(function(job){
       locations.push(job.location);
     });
+    console.log('locations', locations);
 
     return locations;
   }

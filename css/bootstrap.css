@@ -27,11 +27,7 @@
 } */
 
 
-#contact-data {
-  font-weight : bold;
-  color : gray;
-  margin-right : 10px;
-}
+
 
 html {
   font-family: sans-serif;
@@ -40,6 +36,56 @@ html {
 }
 body {
   margin: 0;
+  background-color: #ffffff;
+  font-family: arial;
+}
+#header{
+  background-color: #ffffff;
+  font-family: arial;
+}
+#role {
+  color: gray;
+}
+#welcomeMessage {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+#bioinfo {
+  max-width: 350px;
+  background-color: #ebebeb;
+  padding: 10px;
+}
+#personalDetails {
+  padding: 0px;
+  margin: 0 0 0 10;
+  font-size: 18px;
+
+}
+#topContacts {
+  margin: 0;
+  padding-left: 5px;
+}
+#skillaag {
+  padding: 10 0 10 15;
+}
+#contact-data {
+  font-weight : bold;
+  color : gray;
+  margin-right : 10px;
+}
+.projpic {
+  width: 300px;
+  height: 200px;
+}
+.bluesteel {
+  font-size: 25px;
+}
+.lowbluesteel {
+  font-size: 20px;
+}
+#map {
+  min-height: 450px;
 }
 article,
 aside,
@@ -259,7 +305,7 @@ th {
   }
   p,
   h2,
-  h3 {
+   {
     orphans: 3;
     widows: 3;
   }

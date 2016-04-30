@@ -3,17 +3,6 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 
 
-$("body").css({"backgroundColor" : "#ffffff" , "font-family" : "Arial",});
-$("#header").css({"backgroundColor" : "#ffffff" , "font-family" : "Arial"});
-
-$("#role").css("color", "gray");
-
-$("#welcomeMessage").css({marginTop : "10px", paddingBottom : "10px", paddingTop : "10px"});
-
-$("#bioinfo").css({"max-width" : "350px", "backgroundColor" : "#ebebeb", "padding" : "10px"});
-$("#topContacts").css({"padding" : "0px", "margin" : "0px", fontSize : "18px"});
-$("#skillaag").css({padding: "10px 0px 10px 15px"});
-
 var HTMLnavBar = {
     'bar' : '<nav><hr><ul class="nav nav-pills pull-xs-right"><li class="nav-item"><a class="nav-link" href="#">Projects <span class="sr-only">(current)</span></a></li><li class="nav-item"><a class="nav-link" href="https://github.com/trhubwork">MyCode</a></li><li class="nav-item"> <a class="nav-link" href="#">EmailMe</a></li><li class="nav-item"> <a class="nav-link" href="#">MyMusic</a></li><li class="nav-item"> <a class="nav-link" href="#">UpWork</a></li><li class="nav-item"> <a class="nav-link" href="#">LinkedIn</a></li></nav>'
   }
@@ -25,16 +14,11 @@ var HTMLnavBar = {
 ////////////////////
 
 var bio = {
-  "basic" :
-  {
+
     "name" : "Ted Riss",
     "role" : "Web Developer",
-    "welcomeMessage" : "A computer programmer, with a focus in JavaScript and Python, looking for independent contracting work.",
-    "bioPic": "images/ted.jpg"
 
-  },
-
- "contacts": [
+ "contacts" : [
    {
      "mobile" : "203-867-5309",
      "email" : "ted@example.com",
@@ -42,8 +26,11 @@ var bio = {
      "twitter" : "@trexample",
      "blog" : "trblogyglob",
      "location" : "Denver, CO",
-     "upwork" : "Excel",
-}],
+     "upwork" : "Excel"
+   }
+],
+
+"welcomeMessage" : "A computer programmer, with a focus in JavaScript and Python, looking for independent contracting work.",
 
 "skills" : [
   {
@@ -67,10 +54,13 @@ var bio = {
     "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
   }],
 
+"bioPic": "images/ted.jpg",
+
+
 "display" : function() {
 
-  var formattedName = HTMLheaderName.replace("%data%", bio.basic.name);
-  var formattedRole = HTMLheaderRole.replace("%data%", bio.basic.role);
+  var formattedName = HTMLheaderName.replace("%data%", bio.name);
+  var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
   $("#header").prepend(formattedName);
   $("#role").append(formattedRole);
@@ -91,10 +81,10 @@ var bio = {
 
   }
 
-  var formattedbioPic = HTMLbioPic.replace("%data%", bio.basic.bioPic);
+  var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
   $("#bioinfo").prepend(formattedbioPic);
 
-  var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.basic.welcomeMessage);
+  var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
   $("#bioinfo").prepend(formattedwelcomeMsg);
 
  // iterate through contacts
@@ -143,7 +133,7 @@ var education = {
       "name" : "University of Kansas Graduate School of Business",
       "location" : "Lawrence, KS",
       "degree" : "Masters",
-      "major" : ["Masters of Business Administration"],
+      "majors" : ["Masters of Business Administration"],
       "dates" : "August 2003 - May 2005",
       "url" : "www.business.ku.edu",
     },
@@ -151,7 +141,7 @@ var education = {
     "name" : "University of Kansas",
     "location" : "Lawrence, KS",
     "degree" : "Bachelor of Arts",
-    "major" : ["Political Science"],
+    "majors" : ["Political Science"],
     "dates" : "August 1996 - December 2000",
     "url" : "www.ku.edu",
     }
@@ -159,7 +149,7 @@ var education = {
 
   "onlineCourses" : [
     {
-    "title" : "Front-End Web Developer Nanodegree",
+    "title" : "Front-End Web Developer Nanomajors",
     "school" : "Udacity",
     "date" : "Expected Completion May, 2016",
     "url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
@@ -191,23 +181,25 @@ var education = {
       var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
       $(".education-entry:last").append(formattedschoolDates);
       var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-      $(".location-text:last").append(formattedschoolLocation);
-      var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+      $(".education-text:last").append(formattedschoolLocation);
+      var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
       $(".education-entry:last").append(formattedschoolMajor);
-
     }
-    $(".education-entry:last").append(HTMLonlineClasses);
+    $("#education").append(HTMLonlineClasses);
+
     var len = education.onlineCourses.length;
     for (var online = 0; online < len; online++) {
       console.log(education.onlineCourses[online]);
 
 
-      var formattedtitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[online].title).replace("#", education.onlineCourses[online].url);;
-      $(".education-entry:last").append(formattedtitle);
+      var formattedtitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[online].title).replace("#", education.onlineCourses[online].url);
+      $(".online-education-entry:last").append(formattedtitle);
       var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[online].school);
-      $(".education-entry:last").append(formattedonlineSchool);
+      $(".online-education-entry:last").append(formattedonlineSchool);
       var formattedsonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[online].date);
-      $(".education-entry:last").append(formattedsonlineDates);
+      $(".online-education-entry:last").append(formattedsonlineDates);
+      var formattedUrl = HTMLonlineURL.replace("#", education.onlineCourses[online].url).replace("%data%", education.onlineCourses[online].url)  //'<br><a href="#">%data%</a>';
+      $(".online-education-entry:last").append(formattedUrl);
 
     }
   }
@@ -324,9 +316,6 @@ var projects = {
     $(".project-entry").append(formattedProjectsImages);
 
     }
-    $(".projpic").css({"width" : "300px", "height" : "200px"});
-    $(".bluesteel").css({"font-size" : "25px" });
-    $(".lowbluesteel").css({"font-size" : "20px" });
   }
 };
 
