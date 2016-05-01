@@ -47,9 +47,9 @@ body {
   color: gray;
 }
 #welcomeMessage {
-  margin-top: 10px;
+  margin-top: 0px;
   padding-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 0px;
 }
 #bioinfo {
   max-width: 350px;

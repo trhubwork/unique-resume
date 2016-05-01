@@ -26,9 +26,11 @@ var HTMLlocation = '<li class="flex-item"><span id="contact-data">location</span
 var HTMLupwork = '<li class="flex-item"><span id="contact-data">Upwork Exams</span><span class="contact-value">%data%</span></li>';
 
 var HTMLbioPic = '<img src="%data%" class="img-thumbnail img-circle center-block">';
-var HTMLwelcomeMsg = '<div id="welcomeMessage" class="text-justify "><h3 id="skills-h3">Overview</h3>%data% <hr></div>';
+var HTMLwelcomeMsg = '<div id="welcomeMessage" class="text-justify "><h3 id="skills-h3">Overview</h3>%data% </div>';
 
-var HTMLskillsStart = '<h2>Skills at a Glance</h2><ul id="skills" class="flex-box"></ul>';
+var HTMLSkillsGlance = '<h4>Skills At A Glance:</h4><div>%data%</div> <hr>';
+var HTMLskillsStart = '<h2>Description of Skills</h2><ul id="skills" class="flex-box"></ul>';
+var HTMLskills = '<div>%data%</div>';
 var HTMLskill = '<li class="flex-item lead"><span class="contact-value">%data%</span></li>';
 var HTMLskillDescription = '<li class="flex-item text-justify"><span class="contact-value">%data%</span></li>';
 
@@ -131,9 +133,8 @@ function initializeMap() {
     var locations = [];
 
     // adds the single location property from bio to the locations array
-    bio.contacts.forEach(function(contact){
     locations.push(contact.location);
-    });
+
     //locations.push(bio.contacts.location);
 
     // iterates through school locations and appends each location to

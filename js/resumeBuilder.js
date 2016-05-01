@@ -5,7 +5,7 @@ This is empty on purpose! Your code to build the resume will go here.
 
 var HTMLnavBar = {
     'bar' : '<nav><hr><ul class="nav nav-pills pull-xs-right"><li class="nav-item"><a class="nav-link" href="#">Projects <span class="sr-only">(current)</span></a></li><li class="nav-item"><a class="nav-link" href="https://github.com/trhubwork">MyCode</a></li><li class="nav-item"> <a class="nav-link" href="#">EmailMe</a></li><li class="nav-item"> <a class="nav-link" href="#">MyMusic</a></li><li class="nav-item"> <a class="nav-link" href="#">UpWork</a></li><li class="nav-item"> <a class="nav-link" href="#">LinkedIn</a></li></nav>'
-  }
+  };
 
 
 
@@ -15,46 +15,42 @@ var HTMLnavBar = {
 
 var bio = {
 
-    "name" : "Ted Riss",
-    "role" : "Web Developer",
+	"name": "Ted Riss",
+	"role": "Web Developer",
 
- "contacts" : [
-   {
-     "mobile" : "203-867-5309",
-     "email" : "ted@example.com",
-     "github" : "trhubwork",
-     "twitter" : "@trexample",
-     "blog" : "trblogyglob",
-     "location" : "Denver, CO",
-     "upwork" : "Excel"
-   }
-],
+	"contacts": {
+		"mobile": "203-867-5309",
+		"email": "ted@example.com",
+		"github": "trhubwork",
+		"twitter": "@trexample",
+		"blog": "trblogyglob",
+		"location": "Denver, CO",
+		"upwork": "Excel"
+	},
 
-"welcomeMessage" : "A computer programmer, with a focus in JavaScript and Python, looking for independent contracting work.",
+	"welcomeMessage": "A computer programmer, with a focus in JavaScript and Python, looking for independent contracting work.",
 
-"skills" : [
-  {
-    "skill" : "JavaScript",
-    "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-    },
-    {
-    "skill" : "Python",
-    "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt." ,
-    },
-    {
-    "skill" : "Excel",
-    "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-    },
-    {
-    "skill" : "SEO",
-    "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-    },
-    {
-    "skill" : "WordPress",
-    "description" : "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-  }],
+  "skills": ["JavaScript ", "Python ", "Excel ", "SEO ", "WordPress"],
+  "biopic": "images/ted.jpg",
 
-"bioPic": "images/ted.jpg",
+  "partySkills": [{
+		"skill": "JavaScript",
+		"description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+	}, {
+		"skill": "Python",
+		"description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+	}, {
+		"skill": "Excel",
+		"description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+	}, {
+		"skill": "SEO",
+		"description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+	}, {
+		"skill": "WordPress",
+		"description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+	}],
+
+
 
 
 "display" : function() {
@@ -65,6 +61,7 @@ var bio = {
   $("#header").prepend(formattedName);
   $("#role").append(formattedRole);
   $("#bioinfo").prepend(HTMLcontactGeneric);
+
   $("#skillaag").append(HTMLskillsStart);
   $("#bioinfo").prepend(HTMLnavBar.bar);
 
@@ -73,43 +70,50 @@ var bio = {
   var len = bio.skills.length;
   for (var skill = 0; skill < len; skill++) {
 
-    var formattedSkill = HTMLskill.replace("%data%", bio.skills[skill].skill);
+    var formattedSkill = HTMLskill.replace("%data%", bio.partySkills[skill].skill);
     $("#skillaag").append(formattedSkill);
 
-    var formattedSkillDescrption = HTMLskillDescription.replace("%data%", bio.skills[skill].description);
+    var formattedSkillDescrption = HTMLskillDescription.replace("%data%", bio.partySkills[skill].description);
     $("#skillaag").append(formattedSkillDescrption);
 
   }
 
-  var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+  var formattedbioPic = HTMLbioPic.replace("%data%", bio.biopic);
   $("#bioinfo").prepend(formattedbioPic);
+
+  var formattedSkillsGlance = HTMLSkillsGlance.replace("%data%", bio.skills);
+  $("#bioinfo").prepend(formattedSkillsGlance);
+
 
   var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
   $("#bioinfo").prepend(formattedwelcomeMsg);
 
+
  // iterate through contacts
-    var len = bio.contacts.length;
-    for (var contact = 0; contact < len; contact++) {
+    //var len = bio.contacts.length;
+    //for (var contact = 0; contact < bio.contacts.length; contact++) {
 
-    console.log(bio.contacts[contact]);
+    console.log(bio.contacts);
 
-      var formattedMobile = HTMLmobile.replace("%data%", bio.contacts[contact].mobile);
+
+      var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
       $("#topContacts").append(formattedMobile);
 
-      var formattedemail = HTMLemail.replace("%data%", bio.contacts[contact].email);
+      var formattedemail = HTMLemail.replace("%data%", bio.contacts.email);
       $("#topContacts").append(formattedemail);
 
-      var formattedlocation = HTMLlocation.replace("%data%", bio.contacts[contact].location);
+      var formattedlocation = HTMLlocation.replace("%data%", bio.contacts.location);
       $("#topContacts").append(formattedlocation);
 
-      var formattedgithub = HTMLgithub.replace("%data%", bio.contacts[contact].github);
+      var formattedgithub = HTMLgithub.replace("%data%", bio.contacts.github);
       $("#topContacts").append(formattedgithub);
 
-      var formattedtwitter = HTMLtwitter.replace("%data%", bio.contacts[contact].twitter);
+      var formattedtwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
       $("#topContacts").append(formattedtwitter);
 
-      var formattedupwork = HTMLupwork.replace("%data%", bio.contacts[contact].upwork);
+      var formattedupwork = HTMLupwork.replace("%data%", bio.contacts.upwork);
       $("#topContacts").append(formattedupwork);
+
 
       $("#footerContacts").append(formattedMobile);
       $("#footerContacts").append(formattedemail);
@@ -117,7 +121,7 @@ var bio = {
       $("#footerContacts").append(formattedgithub);
       $("#footerContacts").append(formattedtwitter);
 
-}
+//}
 }
 };
 
@@ -187,7 +191,6 @@ var education = {
     }
     $("#education").append(HTMLonlineClasses);
 
-    var len = education.onlineCourses.length;
     for (var online = 0; online < len; online++) {
       console.log(education.onlineCourses[online]);
 
@@ -198,7 +201,7 @@ var education = {
       $(".online-education-entry:last").append(formattedonlineSchool);
       var formattedsonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[online].date);
       $(".online-education-entry:last").append(formattedsonlineDates);
-      var formattedUrl = HTMLonlineURL.replace("#", education.onlineCourses[online].url).replace("%data%", education.onlineCourses[online].url)  //'<br><a href="#">%data%</a>';
+      var formattedUrl = HTMLonlineURL.replace("#", education.onlineCourses[online].url).replace("%data%", education.onlineCourses[online].url);
       $(".online-education-entry:last").append(formattedUrl);
 
     }
@@ -248,7 +251,7 @@ var work = {
     var len = work.jobs.length;
     for (var job = 0; job < len; job++) {
       console.log(work.jobs[job]);
-      $("#workExperience").append(HTMLworkStart)
+      $("#workExperience").append(HTMLworkStart);
 
       var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
       $("#workExperience").append(formattedEmployer);
