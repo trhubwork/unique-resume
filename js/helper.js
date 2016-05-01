@@ -133,7 +133,8 @@ function initializeMap() {
     var locations = [];
 
     // adds the single location property from bio to the locations array
-    locations.push(contact.location);
+
+    locations.push(location);
 
     //locations.push(bio.contacts.location);
 
